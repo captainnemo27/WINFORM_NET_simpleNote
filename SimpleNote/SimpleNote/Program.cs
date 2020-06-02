@@ -15,6 +15,7 @@ namespace SimpleNote
         [STAThread]
         static void Main()
         {
+            Console.Writline("test");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frm_Users());
