@@ -46,15 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frm_Users.cs">
+    <Compile Include="Views\frm_Note.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Users.Designer.cs">
+    <Compile Include="Views\frm_Note.Designer.cs">
+      <DependentUpon>frm_Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_Users.Designer.cs">
       <DependentUpon>frm_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_Users.resx">
+    <EmbeddedResource Include="Views\frm_Users.resx">
       <DependentUpon>frm_Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,6 +84,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
