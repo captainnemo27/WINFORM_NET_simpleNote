@@ -8,3 +8,14 @@ D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.cspro
 D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.exe
 D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.pdb
 D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.frm_Users.resources
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csprojAssemblyReference.cache
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.frm_Users.resources
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.Properties.Resources.resources
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.GenerateResource.cache
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.CoreCompileInputs.cache
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.exe
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.pdb
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe.config
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\bin\Debug\SimpleNote.pdb
+C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.Views.frm_Note.resources
