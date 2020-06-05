@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Note));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.radioButton_Regular = new System.Windows.Forms.RadioButton();
+            this.comboBox_Size = new System.Windows.Forms.ComboBox();
+            this.comboBox_TextStyle = new System.Windows.Forms.ComboBox();
             this.richText_Note = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.comboBox_TextStyle = new System.Windows.Forms.ComboBox();
-            this.comboBox_Size = new System.Windows.Forms.ComboBox();
-            this.radioButton_Regular = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -80,9 +80,53 @@
             this.splitContainer1.SplitterDistance = 469;
             this.splitContainer1.TabIndex = 1;
             // 
+            // radioButton_Regular
+            // 
+            this.radioButton_Regular.AutoSize = true;
+            this.radioButton_Regular.Font = new System.Drawing.Font("UTM Cafeta", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton_Regular.Location = new System.Drawing.Point(15, 56);
+            this.radioButton_Regular.Name = "radioButton_Regular";
+            this.radioButton_Regular.Size = new System.Drawing.Size(51, 18);
+            this.radioButton_Regular.TabIndex = 2;
+            this.radioButton_Regular.TabStop = true;
+            this.radioButton_Regular.Text = "Regular";
+            this.radioButton_Regular.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_Size
+            // 
+            this.comboBox_Size.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Size.FormattingEnabled = true;
+            this.comboBox_Size.Items.AddRange(new object[] {
+            "2",
+            "4",
+            "6",
+            "8",
+            "12",
+            "14",
+            "16",
+            "24",
+            "48",
+            "72"});
+            this.comboBox_Size.Location = new System.Drawing.Point(152, 28);
+            this.comboBox_Size.Name = "comboBox_Size";
+            this.comboBox_Size.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Size.TabIndex = 1;
+            this.comboBox_Size.SelectedIndexChanged += new System.EventHandler(this.comboBox_Size_SelectedIndexChanged);
+            // 
+            // comboBox_TextStyle
+            // 
+            this.comboBox_TextStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_TextStyle.FormattingEnabled = true;
+            this.comboBox_TextStyle.Location = new System.Drawing.Point(15, 28);
+            this.comboBox_TextStyle.Name = "comboBox_TextStyle";
+            this.comboBox_TextStyle.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_TextStyle.TabIndex = 0;
+            this.comboBox_TextStyle.SelectedIndexChanged += new System.EventHandler(this.comboBox_TextStyle_SelectedIndexChanged);
+            // 
             // richText_Note
             // 
-            this.richText_Note.Location = new System.Drawing.Point(3, 0);
+            this.richText_Note.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richText_Note.Location = new System.Drawing.Point(6, 3);
             this.richText_Note.Name = "richText_Note";
             this.richText_Note.Size = new System.Drawing.Size(571, 552);
             this.richText_Note.TabIndex = 0;
@@ -103,37 +147,6 @@
             this.addNoteToolStripMenuItem.Name = "addNoteToolStripMenuItem";
             this.addNoteToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.addNoteToolStripMenuItem.Text = "AddNote";
-            // 
-            // comboBox_TextStyle
-            // 
-            this.comboBox_TextStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_TextStyle.FormattingEnabled = true;
-            this.comboBox_TextStyle.Location = new System.Drawing.Point(15, 28);
-            this.comboBox_TextStyle.Name = "comboBox_TextStyle";
-            this.comboBox_TextStyle.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_TextStyle.TabIndex = 0;
-            this.comboBox_TextStyle.SelectedIndexChanged += new System.EventHandler(this.comboBox_TextStyle_SelectedIndexChanged);
-            // 
-            // comboBox_Size
-            // 
-            this.comboBox_Size.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Size.FormattingEnabled = true;
-            this.comboBox_Size.Location = new System.Drawing.Point(152, 28);
-            this.comboBox_Size.Name = "comboBox_Size";
-            this.comboBox_Size.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_Size.TabIndex = 1;
-            // 
-            // radioButton_Regular
-            // 
-            this.radioButton_Regular.AutoSize = true;
-            this.radioButton_Regular.Font = new System.Drawing.Font("UTM Cafeta", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Regular.Location = new System.Drawing.Point(15, 56);
-            this.radioButton_Regular.Name = "radioButton_Regular";
-            this.radioButton_Regular.Size = new System.Drawing.Size(51, 18);
-            this.radioButton_Regular.TabIndex = 2;
-            this.radioButton_Regular.TabStop = true;
-            this.radioButton_Regular.Text = "Regular";
-            this.radioButton_Regular.UseVisualStyleBackColor = true;
             // 
             // frm_Note
             // 

@@ -16,6 +16,7 @@ namespace SimpleNote.Views
         public frm_Note()
         {
             InitializeComponent();
+            string text_note;
         }
 
         private void frm_Note_Load(object sender, EventArgs e)
@@ -28,7 +29,19 @@ namespace SimpleNote.Views
 
         private void comboBox_TextStyle_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.richText_Note.Font = new Font(this.comboBox_TextStyle.Font, this.richText_Note.Font.Style);
+            string font = this.comboBox_TextStyle.SelectedItem.ToString();
+            float size = this.richText_Note.Font.Size;
+            Font myfont = new Font(font, size);
+            this.richText_Note.Font = myfont;
+            
+        }
+
+        private void comboBox_Size_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string font = this.richText_Note.Font.Name;
+            float size = float.Parse(this.comboBox_Size.SelectedItem.ToString())*1.0f;
+            Font myfont = new Font(font, size);
+            this.richText_Note.Font = myfont;
         }
     }
 }
