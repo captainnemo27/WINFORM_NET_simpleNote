@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\frm_Note.resx">
+      <DependentUpon>frm_Note.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_Users.resx">
       <DependentUpon>frm_Users.cs</DependentUpon>
     </EmbeddedResource>
