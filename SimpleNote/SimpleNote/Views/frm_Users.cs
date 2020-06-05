@@ -21,10 +21,7 @@ namespace SimpleNote
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -41,9 +38,9 @@ namespace SimpleNote
         }
         private bool check_signin1()
         {
-            if(this.textBox1.Text.Trim().Length==0)
+            if(this.text_NameUser.Text.Trim().Length==0)
             {
-                this.errorProvider1.SetError(this.textBox1, "Need to fill in this box");
+                this.errorProvider1.SetError(this.text_NameUser, "Need to fill in this box");
                 MessageBox.Show("You do not fill the UserName !!! ");
                 return true;
             }
@@ -55,9 +52,9 @@ namespace SimpleNote
         }
         private bool check_signin2()
         {
-            if (this.textBox2.Text.Trim().Length == 0)
+            if (this.text_Password.Text.Trim().Length == 0)
             {
-                this.errorProvider2.SetError(this.textBox2, "Need to fill in this box");
+                this.errorProvider2.SetError(this.text_Password, "Need to fill in this box");
                 MessageBox.Show("You do not fill the Password !!! ");
                 return true;
             }
@@ -69,28 +66,10 @@ namespace SimpleNote
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            
             this.formNote = new frm_Note();
             this.formNote.Show();
-            //signin();
-            /*
-            try
-            {
-                
-                
-                
-                if()
-                {
-                    MessageBox.Show("sign in already", "Esay to Note everything",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("sign in not already !!!","no no no", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("ERROR to connect the sever ");
-            }*/
+
         }
     }
 }
