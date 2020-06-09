@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSimpleNoteModelStoreContainer" CdmEntityContainer="DBSimpleNoteEntities">
+    <EntitySetMapping Name="Notes">
+      <EntityTypeMapping TypeName="DBSimpleNoteModel.Note">
+        <MappingFragment StoreEntitySet="Notes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title_Note" ColumnName="Title_Note" />
+          <ScalarProperty Name="Note1" ColumnName="Note" />
+          <ScalarProperty Name="User_k" ColumnName="User_k" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DBSimpleNoteModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

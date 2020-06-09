@@ -36,8 +36,17 @@
     <Reference Include="Cake.Core, Version=0.38.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Cake.Core.0.38.1\lib\net46\Cake.Core.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,7 +58,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Notes.cs" />
+    <Compile Include="Controllers\NoteController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Models\DBSimpleNote.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSimpleNote.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBSimpleNote.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSimpleNote.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBSimpleNote.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBSimpleNote.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Note.cs">
+      <DependentUpon>DBSimpleNote.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>DBSimpleNote.tt</DependentUpon>
+    </Compile>
     <Compile Include="Views\frm_Note.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +110,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Models\DBSimpleNote.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBSimpleNote.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\DBSimpleNote.edmx.diagram">
+      <DependentUpon>DBSimpleNote.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +130,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\DBSimpleNote.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBSimpleNote.edmx</DependentUpon>
+      <LastGenOutput>DBSimpleNote.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DBSimpleNote.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBSimpleNote.edmx</DependentUpon>
+      <LastGenOutput>DBSimpleNote.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

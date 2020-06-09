@@ -10,12 +10,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
+using SimpleNote.Controllers;
+using SimpleNote.Models;
 using SimpleNote.Views;
 namespace SimpleNote
 {
     public partial class frm_Users : Form
     {
         frm_Note formNote;
+        
         public frm_Users()
         {
             InitializeComponent();
@@ -66,9 +69,24 @@ namespace SimpleNote
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            var b1 = check_signin1();
+            var b2 = check_signin2();
+            var testUser = UserController.getUser(this.text_NameUser.Text, this.text_Password.Text);
+            User user = new User();
+            user.UserName = this.text_NameUser.Text;
+            user.Password = this.text_Password.Text;
+            if (testUser)
+            {
+                this.formNote = new frm_Note(user);
+                this.formNote.Show();
+                
+            }
+            else
+            {
+                MessageBox.Show("sai ten dang nhap or mat khau !!!!!!!");
+            } 
+                            
             
-            this.formNote = new frm_Note();
-            this.formNote.Show();
 
         }
     }

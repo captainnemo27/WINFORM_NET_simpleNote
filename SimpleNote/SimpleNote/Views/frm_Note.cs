@@ -11,12 +11,20 @@ using System.Windows.Forms;
 using Cake.Core.IO;
 using SimpleNote.Views;
 using SimpleNote.Models;
+using SimpleNote.Controllers;
+
 
 namespace SimpleNote.Views
 {
     public partial class frm_Note : Form
     {
-        private List<Notes> _listNotes;
+        //private List<Notes> _listNotes;
+        public User currentUser;
+        public frm_Note(User user)
+        {
+            InitializeComponent();
+            currentUser = user;
+        }
         public frm_Note()
         {
             InitializeComponent();
@@ -93,27 +101,32 @@ namespace SimpleNote.Views
 
         private void addNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Notes _note = new Notes();
+            Note _note = new Note();
             _note.ID = 1;
             _note.Title_Note = this.textBox_TitleNote.Text;
-            _note.Note = this.richText_Note.Text;
+            _note.Note1 = this.richText_Note.Text;
 
             //this._listNotes.Add(_note);
             ListViewItem Note = new ListViewItem(_note.ID.ToString());
             Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, _note.Title_Note.ToString()));
-            Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, _note.Note.ToString()));
+            Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, _note.Note1.ToString()));
             this.listView_ListNote.Items.Add(Note);
             this.textBox_TitleNote.ResetText();
             this.richText_Note.ResetText();
+            DisplayNote();
         }
-        // hasgtag
-
-        /*private void saveNote()
+        private void DisplayNote()
         {
-            var uri = new Uri(FilePath);
-            webBrowser1.Navigate(uri);
-            FileStream source = new FileStream(filepath, FileMode.Open, FileAccess.Read);
-            webBrowser1.DocumentStream = source;
-        }*/
+            List<Note> lstNote = NoteController.getAllNote(currentUser.UserName);
+            this.listView_ListNote.Items.Clear();
+            foreach(Note notess in lstNote)
+            {
+                ListViewItem Note = new ListViewItem(notess.ID.ToString());
+                Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, notess.Title_Note));
+                Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, notess.Note1));
+                this.listView_ListNote.Items.Add(Note);
+            }
+        }
+        
     }
 }
