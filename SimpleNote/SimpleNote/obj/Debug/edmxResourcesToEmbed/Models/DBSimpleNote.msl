@@ -6,7 +6,7 @@
         <MappingFragment StoreEntitySet="Notes">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Title_Note" ColumnName="Title_Note" />
-          <ScalarProperty Name="Note1" ColumnName="Note" />
+          <ScalarProperty Name="RichTextNote" ColumnName="RichTextNote" />
           <ScalarProperty Name="User_k" ColumnName="User_k" />
         </MappingFragment>
       </EntityTypeMapping>

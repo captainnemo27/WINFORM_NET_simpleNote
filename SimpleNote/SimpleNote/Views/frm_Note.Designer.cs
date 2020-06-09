@@ -38,11 +38,11 @@
             this.radioButton_Regular = new System.Windows.Forms.RadioButton();
             this.comboBox_Size = new System.Windows.Forms.ComboBox();
             this.comboBox_TextStyle = new System.Windows.Forms.ComboBox();
+            this.textBox_TitleNote = new System.Windows.Forms.TextBox();
             this.richText_Note = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.textBox_TitleNote = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -102,10 +102,12 @@
             this.listView_ListNote.TabIndex = 3;
             this.listView_ListNote.UseCompatibleStateImageBehavior = false;
             this.listView_ListNote.View = System.Windows.Forms.View.Details;
+            this.listView_ListNote.Click += new System.EventHandler(this.listView_ListNote_Click);
             // 
             // column_Id
             // 
             this.column_Id.Text = "ID";
+            this.column_Id.Width = 38;
             // 
             // column_Title_Note
             // 
@@ -160,6 +162,13 @@
             this.comboBox_TextStyle.TabIndex = 0;
             this.comboBox_TextStyle.SelectedIndexChanged += new System.EventHandler(this.comboBox_TextStyle_SelectedIndexChanged);
             // 
+            // textBox_TitleNote
+            // 
+            this.textBox_TitleNote.Location = new System.Drawing.Point(4, 16);
+            this.textBox_TitleNote.Name = "textBox_TitleNote";
+            this.textBox_TitleNote.Size = new System.Drawing.Size(570, 20);
+            this.textBox_TitleNote.TabIndex = 1;
+            // 
             // richText_Note
             // 
             this.richText_Note.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,13 +195,6 @@
             this.addNoteToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.addNoteToolStripMenuItem.Text = "AddNote";
             this.addNoteToolStripMenuItem.Click += new System.EventHandler(this.addNoteToolStripMenuItem_Click);
-            // 
-            // textBox_TitleNote
-            // 
-            this.textBox_TitleNote.Location = new System.Drawing.Point(4, 16);
-            this.textBox_TitleNote.Name = "textBox_TitleNote";
-            this.textBox_TitleNote.Size = new System.Drawing.Size(570, 20);
-            this.textBox_TitleNote.TabIndex = 1;
             // 
             // frm_Note
             // 

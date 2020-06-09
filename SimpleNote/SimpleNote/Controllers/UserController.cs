@@ -9,6 +9,7 @@ namespace SimpleNote.Controllers
 {
     public class UserController
     {
+        
         public static bool getUser(string username, string password)
         {
             using (var _context = new DBSimpleNoteEntities())
@@ -26,9 +27,10 @@ namespace SimpleNote.Controllers
                 }
                 catch
                 {
-                    return true;
+                    return false;
                 }
             }
         }
+        //public static
     }
 }

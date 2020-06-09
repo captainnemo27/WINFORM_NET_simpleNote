@@ -16,7 +16,7 @@ namespace SimpleNote.Models
     {
         public int ID { get; set; }
         public string Title_Note { get; set; }
-        public string Note1 { get; set; }
+        public string RichTextNote { get; set; }
         public string User_k { get; set; }
     
         public virtual User User { get; set; }

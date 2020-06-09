@@ -102,15 +102,19 @@ namespace SimpleNote.Views
         private void addNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Note _note = new Note();
-            _note.ID = 1;
+            var id = NoteController.getIDfromDB(this.currentUser.UserName);
+            _note.ID = id;
             _note.Title_Note = this.textBox_TitleNote.Text;
-            _note.Note1 = this.richText_Note.Text;
-
+            _note.RichTextNote = this.richText_Note.Text;
+            _note.User_k = this.currentUser.UserName;
             //this._listNotes.Add(_note);
-            ListViewItem Note = new ListViewItem(_note.ID.ToString());
-            Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, _note.Title_Note.ToString()));
-            Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, _note.Note1.ToString()));
-            this.listView_ListNote.Items.Add(Note);
+            //ListViewItem Note = new ListViewItem(_note.ID.ToString());
+            //Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, _note.Title_Note.ToString()));
+            //Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, _note.RichTextNote.ToString()));
+            //this.listView_ListNote.Items.Add(Note);
+            // add bằng DB
+            NoteController.AddNote(_note);
+
             this.textBox_TitleNote.ResetText();
             this.richText_Note.ResetText();
             DisplayNote();
@@ -123,10 +127,15 @@ namespace SimpleNote.Views
             {
                 ListViewItem Note = new ListViewItem(notess.ID.ToString());
                 Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, notess.Title_Note));
-                Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, notess.Note1));
+                Note.SubItems.Add(new ListViewItem.ListViewSubItem(Note, notess.RichTextNote));
                 this.listView_ListNote.Items.Add(Note);
             }
         }
-        
+
+        private void listView_ListNote_Click(object sender, EventArgs e)
+        {
+            this.textBox_TitleNote.Text = this.listView_ListNote.SelectedItems[0].SubItems[1].Text.Trim();
+            this.richText_Note.Text = this.listView_ListNote.SelectedItems[0].SubItems[2].Text.Trim();
+        }
     }
 }

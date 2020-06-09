@@ -3,18 +3,19 @@
   <EntityType Name="Notes">
     <Key>
       <PropertyRef Name="ID" />
+      <PropertyRef Name="User_k" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" />
-    <Property Name="Title_Note" Type="nchar" MaxLength="50" />
-    <Property Name="Note" Type="nvarchar(max)" />
-    <Property Name="User_k" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Title_Note" Type="nvarchar" MaxLength="50" />
+    <Property Name="RichTextNote" Type="nvarchar" MaxLength="50" />
+    <Property Name="User_k" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="UserName" />
     </Key>
-    <Property Name="UserName" Type="nchar" MaxLength="20" Nullable="false" />
-    <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Notes_Users">
     <End Role="Users" Type="Self.Users" Multiplicity="1" />

@@ -3,19 +3,20 @@
   <EntityType Name="Note">
     <Key>
       <PropertyRef Name="ID" />
+      <PropertyRef Name="User_k" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="Title_Note" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Name="Note1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="User_k" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Title_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RichTextNote" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="User_k" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="User" Relationship="Self.FK_Notes_Users" FromRole="Notes" ToRole="Users" />
   </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="UserName" />
     </Key>
-    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Notes" Relationship="Self.FK_Notes_Users" FromRole="Users" ToRole="Notes" />
   </EntityType>
   <Association Name="FK_Notes_Users">
