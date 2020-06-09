@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Note));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.listView_ListNote = new System.Windows.Forms.ListView();
+            this.column_Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_Title_Note = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_Note = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.radioButton_Regular = new System.Windows.Forms.RadioButton();
             this.comboBox_Size = new System.Windows.Forms.ComboBox();
             this.comboBox_TextStyle = new System.Windows.Forms.ComboBox();
@@ -38,6 +42,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.textBox_TitleNote = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -66,6 +71,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.listView_ListNote);
             this.splitContainer1.Panel1.Controls.Add(this.radioButton_Regular);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox_Size);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox_TextStyle);
@@ -73,12 +79,43 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.textBox_TitleNote);
             this.splitContainer1.Panel2.Controls.Add(this.richText_Note);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.Size = new System.Drawing.Size(1050, 555);
             this.splitContainer1.SplitterDistance = 469;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // listView_ListNote
+            // 
+            this.listView_ListNote.AllowColumnReorder = true;
+            this.listView_ListNote.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.column_Id,
+            this.column_Title_Note,
+            this.column_Note});
+            this.listView_ListNote.GridLines = true;
+            this.listView_ListNote.HideSelection = false;
+            this.listView_ListNote.Location = new System.Drawing.Point(3, 278);
+            this.listView_ListNote.Name = "listView_ListNote";
+            this.listView_ListNote.Size = new System.Drawing.Size(463, 261);
+            this.listView_ListNote.TabIndex = 3;
+            this.listView_ListNote.UseCompatibleStateImageBehavior = false;
+            this.listView_ListNote.View = System.Windows.Forms.View.Details;
+            // 
+            // column_Id
+            // 
+            this.column_Id.Text = "ID";
+            // 
+            // column_Title_Note
+            // 
+            this.column_Title_Note.Text = "Title";
+            // 
+            // column_Note
+            // 
+            this.column_Note.Text = "Note";
+            this.column_Note.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.column_Note.Width = 256;
             // 
             // radioButton_Regular
             // 
@@ -126,11 +163,12 @@
             // richText_Note
             // 
             this.richText_Note.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richText_Note.Location = new System.Drawing.Point(6, 3);
+            this.richText_Note.Location = new System.Drawing.Point(6, 42);
             this.richText_Note.Name = "richText_Note";
-            this.richText_Note.Size = new System.Drawing.Size(571, 552);
+            this.richText_Note.Size = new System.Drawing.Size(571, 513);
             this.richText_Note.TabIndex = 0;
             this.richText_Note.Text = "";
+            this.richText_Note.MouseEnter += new System.EventHandler(this.richText_Note_MouseEnter);
             // 
             // menuStrip1
             // 
@@ -147,6 +185,14 @@
             this.addNoteToolStripMenuItem.Name = "addNoteToolStripMenuItem";
             this.addNoteToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.addNoteToolStripMenuItem.Text = "AddNote";
+            this.addNoteToolStripMenuItem.Click += new System.EventHandler(this.addNoteToolStripMenuItem_Click);
+            // 
+            // textBox_TitleNote
+            // 
+            this.textBox_TitleNote.Location = new System.Drawing.Point(4, 16);
+            this.textBox_TitleNote.Name = "textBox_TitleNote";
+            this.textBox_TitleNote.Size = new System.Drawing.Size(570, 20);
+            this.textBox_TitleNote.TabIndex = 1;
             // 
             // frm_Note
             // 
@@ -165,6 +211,7 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
@@ -185,5 +232,10 @@
         private System.Windows.Forms.RadioButton radioButton_Regular;
         private System.Windows.Forms.ComboBox comboBox_Size;
         private System.Windows.Forms.ComboBox comboBox_TextStyle;
+        private System.Windows.Forms.ListView listView_ListNote;
+        private System.Windows.Forms.ColumnHeader column_Id;
+        private System.Windows.Forms.ColumnHeader column_Title_Note;
+        private System.Windows.Forms.ColumnHeader column_Note;
+        private System.Windows.Forms.TextBox textBox_TitleNote;
     }
 }

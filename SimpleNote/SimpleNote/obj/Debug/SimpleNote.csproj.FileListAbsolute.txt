@@ -1,32 +1,15 @@
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe.config
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\bin\Debug\SimpleNote.pdb
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csprojAssemblyReference.cache
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.Properties.Resources.resources
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.GenerateResource.cache
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.CoreCompileInputs.cache
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.exe
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.pdb
-D:\IT\Lập trình trên WINDOW\SimpleNote\SimpleNote\obj\Debug\SimpleNote.frm_Users.resources
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csprojAssemblyReference.cache
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.frm_Users.resources
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.Properties.Resources.resources
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.GenerateResource.cache
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.CoreCompileInputs.cache
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.exe
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.pdb
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe.config
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\bin\Debug\SimpleNote.pdb
-C:\Users\ThangDao\Documents\GitHub\DOAN_LTWIN_simpleNote\SimpleNote\SimpleNote\obj\Debug\SimpleNote.Views.frm_Note.resources
-D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe.config
-D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe
-D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\SimpleNote.pdb
 D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csprojAssemblyReference.cache
 D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.Views.frm_Note.resources
 D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.frm_Users.resources
 D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.Properties.Resources.resources
 D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.GenerateResource.cache
 D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.CoreCompileInputs.cache
+D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe.config
+D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\SimpleNote.exe
+D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\SimpleNote.pdb
+D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\Cake.Core.dll
+D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\Cake.Core.pdb
+D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\bin\Debug\Cake.Core.xml
+D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.csproj.CopyComplete
 D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.exe
 D:\IT\Lập trình trên WINDOW\DOAN_LTWIN_simpleNote-master\SimpleNote\SimpleNote\obj\Debug\SimpleNote.pdb
