@@ -77,9 +77,10 @@ namespace SimpleNote
             user.Password = this.text_Password.Text;
             if (testUser)
             {
+
                 this.formNote = new frm_Note(user);
                 this.formNote.Show();
-                
+
             }
             else
             {
