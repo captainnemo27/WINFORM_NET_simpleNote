@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBSimpleNoteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Notes">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="User_k" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Title_Note" Type="nvarchar" MaxLength="50" />
+          <Property Name="RichTextNote" Type="nvarchar(max)" />
+          <Property Name="User_k" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ColorBg" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorText" Type="nvarchar" MaxLength="50" />
+          <Property Name="Font" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Notes_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Notes" Type="Self.Notes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserName" />
+            </Principal>
+            <Dependent Role="Notes">
+              <PropertyRef Name="User_k" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBSimpleNoteModelStoreContainer">
+          <EntitySet Name="Notes" EntityType="Self.Notes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Notes_Users" Association="Self.FK_Notes_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Notes" EntitySet="Notes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBSimpleNoteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Note">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="User_k" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Title_Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RichTextNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="User_k" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ColorBg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColorText" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Font" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Size" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Notes_Users" FromRole="Notes" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Notes" Relationship="Self.FK_Notes_Users" FromRole="Users" ToRole="Notes" />
+        </EntityType>
+        <Association Name="FK_Notes_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Notes" Type="Self.Note" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserName" />
+            </Principal>
+            <Dependent Role="Notes">
+              <PropertyRef Name="User_k" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBSimpleNoteEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Notes" EntityType="Self.Note" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_Notes_Users" Association="Self.FK_Notes_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Notes" EntitySet="Notes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBSimpleNoteModelStoreContainer" CdmEntityContainer="DBSimpleNoteEntities">
+          <EntitySetMapping Name="Notes">
+            <EntityTypeMapping TypeName="DBSimpleNoteModel.Note">
+              <MappingFragment StoreEntitySet="Notes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title_Note" ColumnName="Title_Note" />
+                <ScalarProperty Name="RichTextNote" ColumnName="RichTextNote" />
+                <ScalarProperty Name="User_k" ColumnName="User_k" />
+                <ScalarProperty Name="ColorBg" ColumnName="ColorBg" />
+                <ScalarProperty Name="ColorText" ColumnName="ColorText" />
+                <ScalarProperty Name="Font" ColumnName="Font" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="DBSimpleNoteModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
